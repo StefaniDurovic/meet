@@ -16,9 +16,9 @@ class Event extends Component {
     return (
       <div>
 
-        <h1 className='description'>
+        <h4 className='description'>
           {event.description}
-        </h1>
+        </h4>
         <p className='event-start'>
           {new Date(event.start.dateTime).toString()}
         </p>
