@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class CitySearch extends Component {
     state = {
         query: '',
-        suggestions: []
+        suggestions: [],
+        showSuggestions: undefined
       }
     handleInputChanged = (event) => {
       const value = event.target.value;
@@ -13,7 +14,7 @@ class CitySearch extends Component {
       this.setState({
         query: value,
         suggestions,
-        showSuggestions: undefined
+        showSuggestions: true
       });
     };
 
@@ -32,6 +33,7 @@ class CitySearch extends Component {
         <input
           type="text"
           className="city"
+          placeholder="Enter a city"
           value={this.state.query}
           onChange={this.handleInputChanged}
           onFocus={() => {

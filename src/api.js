@@ -28,6 +28,7 @@ const checkToken = async (accessToken) => {
   return result;
 };
 
+
 const removeQuery = () => {
   if (window.history.pushState && window.location.pathname) {
     var newurl =
@@ -50,7 +51,6 @@ export const getEvents = async () => {
     return mockData;
   }
 
-
   const token = await getAccessToken();
 
   if (token) {
@@ -66,6 +66,7 @@ export const getEvents = async () => {
     return result.data.events;
   }
 };
+
 
 export const getAccessToken = async () => {
 
