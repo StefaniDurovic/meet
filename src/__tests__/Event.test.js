@@ -15,7 +15,7 @@ describe('Event /> component', () => {
   });
 
   test('rendering Event description', () => {
-    const summary = EventWrapper.find('h1.description');
+    const summary = EventWrapper.find('h4.description');
     expect(summary).toHaveLength(1);
     expect(summary.text()).toBe(event.description);
   });
