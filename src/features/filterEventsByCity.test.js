@@ -3,7 +3,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import App from '../App';
 import { mockData } from '../mock-data';
-import { locations } from '../api';
+import { extractLocations } from '../api';
 import CitySearch from '../CitySearch';
 
 const feature = loadFeature('./src/features/filterEventsByCity.feature');
@@ -27,6 +27,7 @@ defineFeature(feature, test => {
 
     test('User should see a list of suggestions when they search for a city.', ({ given, when, then }) => {
         let CitySearchWrapper;
+        let locations = extractLocations(mockData);
         given('the main page is open', () => {
             CitySearchWrapper = shallow(<CitySearch updateEvents={() => {}} locations={locations} />);
         });
