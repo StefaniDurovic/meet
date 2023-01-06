@@ -14,7 +14,7 @@ class Event extends Component {
     const { collapsed } = this.state;
 
     return (
-      <div>
+      <div className='event'>
 
         <h4 className='description'>
           {event.description}
@@ -27,15 +27,17 @@ class Event extends Component {
         </p>
         {!collapsed && (
           <>
-            <h2 className='about'>
-              About event:
-            </h2>
-            <a className='link' href={event.htmlLink}>
-              See details on Google Calendar
-            </a>
-            <p className='description'>
-              {event.description}
-            </p>
+            <div className='event-details'>
+              <h2 className='about'>
+                About event:
+              </h2>
+              <a className='link' href={event.htmlLink}>
+                See details on Google Calendar
+              </a>
+              <p className='description'>
+                {event.description}
+              </p>
+            </div>
           </>
         )}
         <button className='details-button' onClick={() => this.toggleDetails()}>
