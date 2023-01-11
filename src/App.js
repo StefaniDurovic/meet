@@ -4,6 +4,7 @@ import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import { getEvents, extractLocations } from './api'; 
+import { InfoAlert } from './Alert';
 import './nprogress.css';
 
 class App extends Component {
@@ -51,6 +52,11 @@ class App extends Component {
       <div className="App">       
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents}/>
         <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateEvents={this.updateEvents}/>
+        <div className='offline-alert mb-9'>
+          {!navigator.onLine && (
+            <InfoAlert text={'You are in offline mode, the list of events might not be up to date.'} />
+          )}
+        </div>
         <EventList events={this.state.events} />    
       </div>
     );
