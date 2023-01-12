@@ -10,7 +10,8 @@ Given user hasn’t searched for any city
 
 When the user opens the app  
 
-Then the user should see a list of all upcoming events
+Then the user should see a list of all upcoming events  
+
 
 *Scenario 2*: USER SHOULD SEE A LIST OF SUGGESTIONS WHEN THEY SEARCH FOR A CITY. 
 
@@ -18,7 +19,8 @@ Given the main page is open
 
 When user starts typing in the city textbox  
 
-Then the user should see a list of cities (suggestions) that match what they’ve typed
+Then the user should see a list of cities (suggestions) that match what they’ve typed  
+
 
 *Scenario 3*: USER CAN SELECT A CITY FROM THE SUGGESTED LIST.  
 
@@ -30,7 +32,8 @@ When the user selects a city (e.g., “Berlin, Germany”) from the list
 
 Then their city should be changed to that city (i.e., “Berlin, Germany”)  
 
-And the user should receive a list of upcoming events in that city
+And the user should receive a list of upcoming events in that city  
+
 
 * **FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS**   
 
@@ -44,7 +47,8 @@ Given that user hasn’t clicked on an event
 
 When the user opens the app  
 
-Then all event elements should be collapsed by default
+Then all event elements should be collapsed by default  
+
 
 *Scenario 2*: User can expand an event to see its details  
 
@@ -56,7 +60,8 @@ Given that user has opened the app
 
 When the user clicks on an event  
 
-Then the user should see the event’s details 
+Then the user should see the event’s details    
+
 
 *Scenario 3*: User can collapse an event to hide its details  
 
@@ -68,7 +73,8 @@ Given that user has clicked on an event
 
 When the user clicks the designated button  
 
-Then the event details should be hidden
+Then the event details should be hidden   
+
 
 * **FEATURE 3: SPECIFY NUMBER OF EVENTS**  
 
@@ -95,7 +101,8 @@ Given that user has opened the app
 
 When the user enters the number of events to be shown  
 
-Then that number of events should be shown
+Then that number of events should be shown  
+
 
 * **FEATURE 4: USE THE APP WHEN OFFLINE**  
 
@@ -109,7 +116,8 @@ Given that there is no internet connection
 
 When the user opens the app in offline mode   
 
-Then the user should see previously saved data
+Then the user should see previously saved data  
+
 
 *Scenario 2*: Show error when user changes the settings (city, time range)  
 
@@ -121,7 +129,8 @@ Given that there is no internet connection
 
 When the user tries to change settings in offline mode  
 
-Then the user should see an error message
+Then the user should see an error message  
+
 
 * **FEATURE 5: DATA VISUALIZATION**   
 
