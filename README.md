@@ -2,7 +2,8 @@
 
 ## FEATURES:
 
-* **FEATURE 1: FILTER EVENTS BY CITY**
+* **FEATURE 1: FILTER EVENTS BY CITY**     
+
 Scenario 1: WHEN USER HASN’T SEARCHED FOR A CITY, SHOW UPCOMING EVENTS FROM ALL CITIES.
 Given user hasn’t searched for any city
 When the user opens the app
