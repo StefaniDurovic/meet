@@ -1,4 +1,4 @@
-# A React app for finding events in different cities.
+# A React app for finding events in different cities
 
 ## FEATURES:
 
