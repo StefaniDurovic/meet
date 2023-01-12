@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ErrorAlert } from './Alert';
+import './App.css';
 
 class NumberOfEvents extends Component {
   state = { 
@@ -34,7 +35,7 @@ class NumberOfEvents extends Component {
             Number of Events:
             <input
               type="number"
-              className="number"
+              className="numberOfEvents"
               placeholder="Enter desired number of events"
               value={this.state.numberOfEvents}
               onChange={this.handleInputChange}
