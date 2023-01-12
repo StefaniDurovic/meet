@@ -1,8 +1,8 @@
-This is a React app for finding events in different cities.
+# A React app for finding events in different cities.
 
-FEATURES:
+## FEATURES:
 
-FEATURE 1: FILTER EVENTS BY CITY
+* **FEATURE 1: FILTER EVENTS BY CITY**
 Scenario 1: WHEN USER HASN’T SEARCHED FOR A CITY, SHOW UPCOMING EVENTS FROM ALL CITIES.
 Given user hasn’t searched for any city
 When the user opens the app
@@ -20,7 +20,7 @@ When the user selects a city (e.g., “Berlin, Germany”) from the list
 Then their city should be changed to that city (i.e., “Berlin, Germany”)
 And the user should receive a list of upcoming events in that city
 
-FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS
+* **FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS**
 Scenario 1: An event element is collapsed by default
 User story: As a user, I would like the event element to be collapsed by default, so that I can easily navigate and find the events I like.
 Gherkin:
@@ -42,7 +42,7 @@ Given that user has clicked on an event
 When the user clicks the designated button
 Then the event details should be hidden
 
-FEATURE 3: SPECIFY NUMBER OF EVENTS
+* **FEATURE 3: SPECIFY NUMBER OF EVENTS**
 Scenario 1: When user hasn’t specified a number, 32 is the default number
 User story: As a user, if I have not specified the number of events to see, I should see that the default number of events is 32, so that I know what to expect.
 Gherkin:
@@ -57,7 +57,7 @@ Given that user has opened the app
 When the user enters the number of events to be shown
 Then that number of events should be shown
 
-FEATURE 4: USE THE APP WHEN OFFLINE
+* **FEATURE 4: USE THE APP WHEN OFFLINE**
 Scenario 1: Show cached data when there’s no internet connection
 User story: As a user, I should be able to see cached data when there is no internet connection, so that I can continue seeing previously saved data.
 Gherkin:
@@ -72,7 +72,7 @@ Given that there is no internet connection
 When the user tries to change settings in offline mode
 Then the user should see an error message
 
-FEATURE 5: DATA VISUALIZATION
+* **FEATURE 5: DATA VISUALIZATION**
 Scenario 1: Show a chart with the number of upcoming events in each city
 User story: As a user, I should be able to see a chart with the number of upcoming events in each city, so that that can make it easier for me to browse the information I am interested in.
 Gherkin:
