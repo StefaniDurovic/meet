@@ -46,57 +46,93 @@ When the user opens the app
 
 Then all event elements should be collapsed by default
 
-*Scenario 2*: User can expand an event to see its details
-User story: As a user, I should be able to expand an event, so that I can see the details of the event I am interested in.
-Gherkin:
-Given that user has opened the app
-When the user clicks on an event
-Then the user should see the event’s details
+*Scenario 2*: User can expand an event to see its details  
 
-*Scenario 3*: User can collapse an event to hide its details
-User story: As a user, I should be able to collapse an event, so that I can hide its details.
-Gherkin:
-Given that user has clicked on an event
-When the user clicks the designated button
+User story: As a user, I should be able to expand an event, so that I can see the details of the event I am interested in.  
+
+Gherkin:  
+
+Given that user has opened the app  
+
+When the user clicks on an event  
+
+Then the user should see the event’s details 
+
+*Scenario 3*: User can collapse an event to hide its details  
+
+User story: As a user, I should be able to collapse an event, so that I can hide its details.  
+
+Gherkin:  
+
+Given that user has clicked on an event  
+
+When the user clicks the designated button  
+
 Then the event details should be hidden
 
 * **FEATURE 3: SPECIFY NUMBER OF EVENTS**  
 
-*Scenario 1*: When user hasn’t specified a number, 32 is the default number
-User story: As a user, if I have not specified the number of events to see, I should see that the default number of events is 32, so that I know what to expect.
-Gherkin:
-Given that user hasn’t specified a number of events to be shown
-When the user opens the app
-Then the number of shown events should be 32
+*Scenario 1*: When user hasn’t specified a number, 32 is the default number  
 
-*Scenario 2*: User can change the number of events they want to see
-User story: As a user, I should be able to change the number of events I want to see, so that I can adjust the user experience in this feature to my preferences.
-Gherkin:
-Given that user has opened the app
-When the user enters the number of events to be shown
+User story: As a user, if I have not specified the number of events to see, I should see that the default number of events is 32, so that I know what to expect.  
+
+Gherkin:   
+
+Given that user hasn’t specified a number of events to be shown  
+
+When the user opens the app  
+
+Then the number of shown events should be 32  
+
+
+*Scenario 2*: User can change the number of events they want to see  
+
+User story: As a user, I should be able to change the number of events I want to see, so that I can adjust the user experience in this feature to my preferences.  
+
+Gherkin:  
+
+Given that user has opened the app  
+
+When the user enters the number of events to be shown  
+
 Then that number of events should be shown
 
 * **FEATURE 4: USE THE APP WHEN OFFLINE**  
 
-*Scenario 1*: Show cached data when there’s no internet connection
-User story: As a user, I should be able to see cached data when there is no internet connection, so that I can continue seeing previously saved data.
-Gherkin:
-Given that there is no internet connection
-When the user opens the app in offline mode
+*Scenario 1*: Show cached data when there’s no internet connection  
+
+User story: As a user, I should be able to see cached data when there is no internet connection, so that I can continue seeing previously saved data.  
+
+Gherkin:  
+
+Given that there is no internet connection  
+
+When the user opens the app in offline mode   
+
 Then the user should see previously saved data
 
-*Scenario 2*: Show error when user changes the settings (city, time range)
-User story: As a user, I should be able to see an error message when trying to change settings in offline mode, so that I have an overview of which settings of mine are saved.
-Gherkin:
-Given that there is no internet connection
-When the user tries to change settings in offline mode
+*Scenario 2*: Show error when user changes the settings (city, time range)  
+
+User story: As a user, I should be able to see an error message when trying to change settings in offline mode, so that I have an overview of which settings of mine are saved.  
+
+Gherkin:   
+
+Given that there is no internet connection  
+
+When the user tries to change settings in offline mode  
+
 Then the user should see an error message
 
 * **FEATURE 5: DATA VISUALIZATION**   
 
-*Scenario 1*: Show a chart with the number of upcoming events in each city
-User story: As a user, I should be able to see a chart with the number of upcoming events in each city, so that that can make it easier for me to browse the information I am interested in.
-Gherkin:
-Given that user has opened the app
-When the user selects a city
+*Scenario 1*: Show a chart with the number of upcoming events in each city   
+
+User story: As a user, I should be able to see a chart with the number of upcoming events in each city, so that that can make it easier for me to browse the information I am interested in.   
+
+Gherkin:  
+
+Given that user has opened the app  
+
+When the user selects a city  
+
 Then the user should see a chart with the number of upcoming events in that city
