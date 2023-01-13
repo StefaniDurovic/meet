@@ -16,6 +16,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import EventGenre from './EventGenre';
 
 
 class App extends Component {
@@ -103,24 +104,28 @@ class App extends Component {
           )}
         </div>
 
-        <h4>Events in each city</h4>
-
-        <ResponsiveContainer height={400}>
-          <ScatterChart
-            margin={{
-              top: 20,
-              right: 20,
-              bottom: 20,
-              left: 20,
-            }}
-          >
-            <CartesianGrid />
-            <XAxis type="category" dataKey="city" name="city" />
-            <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false}/>
-            <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-            <Scatter data={this.getData()} fill="#8884d8" />
-          </ScatterChart>
-        </ResponsiveContainer>
+        <div className="data-vis-wrapper">          
+          <h4>Number of events per city</h4>
+          <ResponsiveContainer height={400}>
+            <ScatterChart
+              margin={{
+                top: 20,
+                right: 20,
+                bottom: 20,
+                left: 20,
+              }}
+            >
+              <CartesianGrid />
+              <XAxis type="category" dataKey="city" name="city" />
+              <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false}/>
+              <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+              <Scatter data={this.getData()} fill="#8884d8" />
+            </ScatterChart>
+          </ResponsiveContainer>
+          
+          <h4>Genre popularity</h4>
+          <EventGenre events={this.state.events}/>
+        </div>
 
         <EventList events={this.state.events} />
         <WelcomeScreen
