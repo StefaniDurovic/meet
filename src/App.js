@@ -104,8 +104,12 @@ class App extends Component {
           )}
         </div>
 
-        <div className="data-vis-wrapper">          
-          <h4>Number of events per city</h4>
+        <h4>Popularity of events and number of events per city</h4>
+
+        <div className="data-vis-wrapper">     
+
+          <EventGenre events={this.state.events}/>
+
           <ResponsiveContainer height={400}>
             <ScatterChart
               margin={{
@@ -123,11 +127,10 @@ class App extends Component {
             </ScatterChart>
           </ResponsiveContainer>
           
-          <h4>Genre popularity</h4>
-          <EventGenre events={this.state.events}/>
         </div>
 
         <EventList events={this.state.events} />
+        
         <WelcomeScreen
           showWelcomeScreen={this.state.showWelcomeScreen}
           getAccessToken={() => {
